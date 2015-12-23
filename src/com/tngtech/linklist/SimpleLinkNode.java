@@ -1,11 +1,11 @@
 package com.tngtech.linklist;
 /**
  * 
- * ¼òµ¥µ¥ÏîÁ´±í-½Úµã
+ * ç®€å•å•é¡¹é“¾è¡¨-èŠ‚ç‚¹
  * 
  * @author tngtech
  * 
- * <p>²©¿Í:http://blog.csdn.net/jacman
+ * <p>åšå®¢:http://blog.csdn.net/jacman
  * 
  * <p>https://github.com/tangthis
  */

@@ -5,26 +5,26 @@ package com.tngtech.linklist;
 
 /**
  * 
- * ¼òµ¥µ¥ÏòÁ´±í
+ * ç®€å•å•å‘é“¾è¡¨
  * 
  * @author tngtech
  * 
  *         <p>
- *         ²©¿Í:http://blog.csdn.net/jacman
+ *         åšå®¢:http://blog.csdn.net/jacman
  * 
  *         <p>
  *         Github:https://github.com/tangthis
  */
 public class SimpleLinkList {
 
-	/** Í·½Úµã */
+	/** å¤´èŠ‚ç‚¹ */
 	private SimpleLinkNode header = null;
 
-	/** Î²½Úµã */
+	/** å°¾èŠ‚ç‚¹ */
 	private SimpleLinkNode tail = null;
 
 	/**
-	 * ³õÊ¼»¯Ò»¸öÁ´±í£¨ÉèÖÃÍ·½Úµãhead£©
+	 * åˆå§‹åŒ–ä¸€ä¸ªé“¾è¡¨ï¼ˆè®¾ç½®å¤´èŠ‚ç‚¹headï¼‰
 	 * 
 	 * @param node
 	 */
@@ -34,7 +34,7 @@ public class SimpleLinkList {
 	}
 
 	/**
-	 * Ìí¼Ó½Úµã
+	 * æ·»åŠ èŠ‚ç‚¹
 	 * 
 	 * @param node
 	 */
@@ -49,7 +49,7 @@ public class SimpleLinkList {
 	}
 
 	/**
-	 * ±éÀú´òÓ¡½Úµã
+	 * éå†æ‰“å°èŠ‚ç‚¹
 	 * 
 	 * @param myList
 	 */
@@ -62,10 +62,10 @@ public class SimpleLinkList {
 	}
 
 	/**
-	 * ´òÓ¡µ¥Á´±í
+	 * æ‰“å°å•é“¾è¡¨
 	 * 
 	 * @param head
-	 *            Á´±íÍ·Ö¸Õë
+	 *            é“¾è¡¨å¤´æŒ‡é’ˆ
 	 */
 	public static void printLinkNode(SimpleLinkNode head) {
 		if (head == null || head.next == null) {
@@ -81,7 +81,7 @@ public class SimpleLinkList {
 	}
 
 	/**
-	 * É¾³ıÁ´±íÖĞµÄ½Úµã
+	 * åˆ é™¤é“¾è¡¨ä¸­çš„èŠ‚ç‚¹
 	 * 
 	 * @param node
 	 * @param myList
@@ -91,7 +91,7 @@ public class SimpleLinkList {
 			return;
 		}
 
-		// ÅĞ¶ÏÊÇ·ñÍ·½Úµã²¢ÇÒÉ¾³ı
+		// åˆ¤æ–­æ˜¯å¦å¤´èŠ‚ç‚¹å¹¶ä¸”åˆ é™¤
 		if (myList.header != null && myList.header.getElement() == node.getElement()) {
 			header = header.next;
 			return;
@@ -99,13 +99,13 @@ public class SimpleLinkList {
 
 		SimpleLinkNode tmp;
 		for (tmp = myList.getHeader(); tmp != null; tmp = tmp.next) {
-			if (tmp.next != null && node.getElement() == tmp.next.getElement()) {// ¸ÃÔªËØºÍÏÂÒ»¸öÔªËØÏàÍ¬£¬Ö¸ÕëÖ¸ÏòÏÂÒ»¸öÔªËØµÄÏÂÒ»¸öÔªËØ
+			if (tmp.next != null && node.getElement() == tmp.next.getElement()) {// è¯¥å…ƒç´ å’Œä¸‹ä¸€ä¸ªå…ƒç´ ç›¸åŒï¼ŒæŒ‡é’ˆæŒ‡å‘ä¸‹ä¸€ä¸ªå…ƒç´ çš„ä¸‹ä¸€ä¸ªå…ƒç´ 
 				if (tmp.next.next != null) {
 					tmp.next = tmp.next.next;
 				} else {
 					tmp.next = null;
 				}
-				break;// Ìø³öÑ­»·
+				break;// è·³å‡ºå¾ªç¯
 			}
 		}
 
@@ -127,10 +127,10 @@ public class SimpleLinkList {
 		this.tail = tail;
 	}
 	/**
-	 * ºÏ²¢2¸öÓĞĞòÁ´±í
-	 * @param a ÓĞĞòÁ´±í1
-	 * @param b	ÓĞĞòÁ´±í2
-	 * @param union ºÏ²¢ºóµÄÁ´±í
+	 * åˆå¹¶2ä¸ªæœ‰åºé“¾è¡¨
+	 * @param a æœ‰åºé“¾è¡¨1
+	 * @param b	æœ‰åºé“¾è¡¨2
+	 * @param union åˆå¹¶åçš„é“¾è¡¨
 	 * @return
 	 */
 	public static SimpleLinkNode union(SimpleLinkNode a, SimpleLinkNode b, SimpleLinkNode union) {
@@ -159,18 +159,18 @@ public class SimpleLinkList {
 			SimpleLinkNode node = new SimpleLinkNode(i);
 			pa.addToList(node);
 		}
-		System.out.println("Á´±ípa:");
+		System.out.println("é“¾è¡¨pa:");
 		printList(pa);
 		SimpleLinkList pb = new SimpleLinkList();
 		for (int i = 20; i <= 30; i++) {
 			SimpleLinkNode node = new SimpleLinkNode(i);
 			pb.addToList(node);
 		}
-		System.out.println("Á´±ípb:");
+		System.out.println("é“¾è¡¨pb:");
 		printList(pb);
 		SimpleLinkNode union = null;
 		union = union(pa.getHeader(), pb.getHeader(), union);
-		System.out.println("ºÏ²¢ºóunion:");
+		System.out.println("åˆå¹¶åunion:");
 		printLinkNode(union);
 	}
 
